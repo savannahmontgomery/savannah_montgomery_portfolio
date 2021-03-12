@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Box from "ui-box";
+import { NavigationBar } from "./NavigationBar";
+import { RainbowBackground } from "./RainbowBackground";
+import { PortfolioItem } from "./PortfolioItem";
+import { WelcomeSection } from "./WelcomeSection";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RainbowBackground />
+      <Box position="relative" zIndex={9999}>
+        <NavigationBar />
+        <Box marginLeft={70} marginTop={40}>
+          <WelcomeSection />
+          <PortfolioItem />
+          <PortfolioItem />
+          <PortfolioItem />
+        </Box>
+      </Box>
     </div>
   );
 }
