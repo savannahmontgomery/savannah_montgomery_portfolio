@@ -1,5 +1,7 @@
 import React from "react";
 import Box from "ui-box";
+import MLogo from "./assets/LogoVectorM.svg"
+import DLogo from "./assets/LogoVectorD.svg"
 
 function CircleLinkButton({ content }) {
   return (
@@ -41,7 +43,11 @@ export function NavigationBar() {
         width="50%"
         alignItems="center"
       >
-        <Box>SVG</Box>
+        <Box>
+          {/* TODO: GET SINGLE SVG FROM NAN */}
+          <img src={MLogo} alt="MontgomeryDesign Logo" />
+          <img src={DLogo} alt="MontgomeryDesign Logo" />
+        </Box>
         <Box display="flex">
           <CircleLinkButton content="in" />
           <CircleLinkButton content="d" />

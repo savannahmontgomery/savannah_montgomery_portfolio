@@ -1,5 +1,6 @@
 import React from "react";
 import Box from "ui-box";
+import Headshot from "./assets/savCircleHeadshot.png"
 
 export function WelcomeSection() {
   return (
@@ -18,7 +19,9 @@ export function WelcomeSection() {
         fontSize="45px"
         height="294px"
         width="294px"
-      />
+      >
+        <img src={Headshot} alt="" style={{float: 'right', width: '91%'}}></img>
+      </Box>
     </Box>
   );
 }
